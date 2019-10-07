@@ -100,7 +100,7 @@
         <li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}">
             <!-- Display the name and price for every entry in the array .
                  Vue.js has a built in currency filter for formatting the price -->
-            {{service.name}} <input class="form-control" v-model="service.quantity" type="number"  min="0" id="example-number-input"> <span>{{service.price | currency}}</span>
+            {{service.name}} <input class="form-control" v-model="service.quantity" type="number"  min="0" max="15" id="example-number-input"> <span>{{service.price | currency}}</span>
         </li>
     </ul>
     <div class="total">
